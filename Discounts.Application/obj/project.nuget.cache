@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Owk4atjNrq4=",
+  "success": true,
+  "projectFilePath": "/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/Discounts.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/narso/.nuget/packages/fluentvalidation/12.1.1/fluentvalidation.12.1.1.nupkg.sha512",
+    "/Users/narso/.nuget/packages/mapster/7.4.0/mapster.7.4.0.nupkg.sha512",
+    "/Users/narso/.nuget/packages/mapster.core/1.2.1/mapster.core.1.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}
