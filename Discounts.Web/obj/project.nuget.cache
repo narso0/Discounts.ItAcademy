@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "NkSW8GxXAl8=",
+  "dgSpecHash": "5tndpZBlVSA=",
   "success": true,
   "projectFilePath": "/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Web/Discounts.Web.csproj",
   "expectedPackageFiles": [
     "/Users/narso/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/Users/narso/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",
-    "/Users/narso/.nuget/packages/fluentvalidation/11.11.0/fluentvalidation.11.11.0.nupkg.sha512",
+    "/Users/narso/.nuget/packages/fluentvalidation/12.1.1/fluentvalidation.12.1.1.nupkg.sha512",
     "/Users/narso/.nuget/packages/fluentvalidation.aspnetcore/11.3.1/fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
     "/Users/narso/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.11.0/fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
     "/Users/narso/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",

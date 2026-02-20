@@ -1,3 +1,5 @@
+using Discounts.Domain.Common;
+
 namespace Discounts.Domain.Entities;
 
 public class Reservation : BaseEntity
@@ -8,5 +10,5 @@ public class Reservation : BaseEntity
     public DateTime ExpiryTime { get; set;}
     public bool IsUsed{ get; set;} = false;
     public int DiscountId { get; set;}
-    public Discount? Title { get; set;}
+    public Discount? Discount { get; set;}
 }

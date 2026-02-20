@@ -1,12 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "Owk4atjNrq4=",
+  "dgSpecHash": "SRRWrrEpmnI=",
   "success": true,
   "projectFilePath": "/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/Discounts.Application.csproj",
   "expectedPackageFiles": [
     "/Users/narso/.nuget/packages/fluentvalidation/12.1.1/fluentvalidation.12.1.1.nupkg.sha512",
     "/Users/narso/.nuget/packages/mapster/7.4.0/mapster.7.4.0.nupkg.sha512",
-    "/Users/narso/.nuget/packages/mapster.core/1.2.1/mapster.core.1.2.1.nupkg.sha512"
+    "/Users/narso/.nuget/packages/mapster.core/1.2.1/mapster.core.1.2.1.nupkg.sha512",
+    "/Users/narso/.nuget/packages/microsoft.aspnetcore.cryptography.internal/8.0.0/microsoft.aspnetcore.cryptography.internal.8.0.0.nupkg.sha512",
+    "/Users/narso/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/8.0.0/microsoft.aspnetcore.cryptography.keyderivation.8.0.0.nupkg.sha512",
+    "/Users/narso/.nuget/packages/microsoft.extensions.caching.abstractions/8.0.0/microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
+    "/Users/narso/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "/Users/narso/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/narso/.nuget/packages/microsoft.extensions.identity.core/8.0.0/microsoft.extensions.identity.core.8.0.0.nupkg.sha512",
+    "/Users/narso/.nuget/packages/microsoft.extensions.identity.stores/8.0.0/microsoft.extensions.identity.stores.8.0.0.nupkg.sha512",
+    "/Users/narso/.nuget/packages/microsoft.extensions.logging/8.0.0/microsoft.extensions.logging.8.0.0.nupkg.sha512",
+    "/Users/narso/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/Users/narso/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "/Users/narso/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

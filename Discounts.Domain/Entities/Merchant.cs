@@ -1,3 +1,6 @@
+using Discounts.Domain.Common;
+using Discounts.Domain.Enums;
+
 namespace Discounts.Domain.Entities;
 
 public class Merchant : BaseEntity

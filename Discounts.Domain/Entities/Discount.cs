@@ -1,3 +1,5 @@
+using Discounts.Domain.Common;
+
 namespace Discounts.Domain.Entities;
 
 public class Discount : BaseEntity
