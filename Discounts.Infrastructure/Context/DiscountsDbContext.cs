@@ -15,7 +15,7 @@ public class DiscountsDbContext : IdentityDbContext<IdentityUser>
     public DbSet<Merchant> Merchants { get; set; }
     public DbSet<Reservation> Reservations { get; set; }
 
-    protected override vodi OnModelCreating(ModelBuilder builder)
+    protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
         builder.Entity<Discount>()
