@@ -1,0 +1,74 @@
+@model Discounts.Web.Models.Auth.RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="mb-4">Create an Account</h2>
+            <form asp-action="Register" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="ConfirmPassword" class="form-label">Confirm Password</label>
+                    <input asp-for="ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Role" class="form-label">I want to register as a...</label>
+                    <select asp-for="Role" class="form-select" id="roleSelector" onchange="toggleMerchantFields()">
+                        <option value="Customer">Customer</option>
+                        <option value="Merchant">Merchant</option>
+                    </select>
+                </div>
+
+                <div id="merchantFields" style="display: none; background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
+                    <h5 class="mb-3">Business Information</h5>
+                    <div class="mb-3">
+                        <label asp-for="MerchantName" class="form-label">Business Name</label>
+                        <input asp-for="MerchantName" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="MerchantPhone" class="form-label">Contact Number</label>
+                        <input asp-for="MerchantPhone" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="MerchantDetails" class="form-label">Business Description</label>
+                        <textarea asp-for="MerchantDetails" class="form-control" rows="3"></textarea>
+                    </div>
+                    <small class="text-muted">Note: Merchant accounts require Admin approval before you can post discounts.</small>
+                </div>
+
+                <button type="submit" class="btn btn-success w-100">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        function toggleMerchantFields() {
+            var role = document.getElementById("roleSelector").value;
+            var merchantDiv = document.getElementById("merchantFields");
+            if (role === "Merchant") {
+                merchantDiv.style.display = "block";
+            } else {
+                merchantDiv.style.display = "none";
+            }
+        }
+        window.onload = toggleMerchantFields;
+    </script>
+}
