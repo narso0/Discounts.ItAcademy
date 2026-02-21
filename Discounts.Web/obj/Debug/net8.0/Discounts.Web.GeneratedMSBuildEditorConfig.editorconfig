@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Web/Views/Admin/PendingMerchants.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUGVuZGluZ01lcmNoYW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Web/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

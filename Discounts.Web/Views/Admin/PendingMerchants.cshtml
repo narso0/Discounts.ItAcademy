@@ -1,0 +1,53 @@
+@using Discounts.Domain.Entities
+@model IEnumerable<Merchant>
+
+@{
+    ViewData["Title"] = "Pending Merchants";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4"><i class="bi bi-shop"></i> Pending Merchant Approvals</h2>
+    @if (!Model.Any())
+    {
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">All caught up!</h4>
+            <p>There are currently no merchants waiting for approval.</p>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-hover table-striped border">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Business Name</th>
+                        <th>Email</th>
+                        <th>Contact Number</th>
+                        <th>Description</th>
+                        <th>Applied On</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var merchant in Model)
+                    {
+                        <tr>
+                            <td class="fw-bold">@merchant.Name</td>
+                            <td>@merchant.Email</td>
+                            <td>@merchant.Number</td>
+                            <td><small>@merchant.Description</small></td>
+                            <td>@merchant.CreatedAt.ToString("MMM dd, yyyy")</td>
+                            <td>
+                                <form asp-controller="Admin" asp-action="ApproveMerchant" asp-route-id="@merchant.Id" method="post">
+                                    <button type="submit" class="btn btn-success btn-sm">
+                                        Approve
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
