@@ -12,7 +12,7 @@ public class Discount : BaseEntity
     public int Quantity { get; set;}
     public DateTime StartDate { get; set;}
     public DateTime EndDate { get; set;}
-    public bool IsActive { get; set;} = false;
+    public bool IsActive { get; set; } = false;
 
     public int MerchantId { get; set;}
     public Merchant? Merchant { get; set;}
