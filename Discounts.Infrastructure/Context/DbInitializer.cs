@@ -33,8 +33,7 @@ namespace Discounts.Infrastructure.Context
                 await _roleManager.CreateAsync(new IdentityRole("Merchant")).ConfigureAwait(false);
                 await _roleManager.CreateAsync(new IdentityRole("Customer")).ConfigureAwait(false);
 
-                var adminUser = new IdentityUser { UserName = "admin", Email = "admin@narso.com", EmailConfirmed = true };
-                await _userManager.CreateAsync(adminUser, "Admin123!").ConfigureAwait(false);
+                var adminUser = new IdentityUser { UserName = "admin@narso.com", Email = "admin@narso.com", EmailConfirmed = true };                await _userManager.CreateAsync(adminUser, "Admin123!").ConfigureAwait(false);
                 await _userManager.AddToRoleAsync(adminUser, "Admin").ConfigureAwait(false);
             }
 

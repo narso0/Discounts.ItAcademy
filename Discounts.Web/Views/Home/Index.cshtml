@@ -2,6 +2,17 @@
     ViewData["Title"] = "Home Page";
 }
 
+@if (ViewBag.Message == "PendingApproval")
+{
+    <div class="alert alert-warning alert-dismissible fade show mt-4" role="alert">
+        <h4 class="alert-heading"><i class="bi bi-clock-history"></i> Application Received!</h4>
+        <p>Your Merchant account has been successfully created and is currently <strong>Pending Approval</strong>.</p>
+        <hr>
+        <p class="mb-0">Our administrative team will review your business details. You will be able to log in and post discounts once your account is approved.</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
