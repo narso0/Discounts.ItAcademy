@@ -1,0 +1,13 @@
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Domain/bin/Debug/net8.0/Discounts.Domain.deps.json
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Domain/bin/Debug/net8.0/Discounts.Domain.dll
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Domain/bin/Debug/net8.0/Discounts.Domain.pdb
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Domain/obj/Debug/net8.0/Discounts.Domain.csproj.AssemblyReference.cache
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Domain/obj/Debug/net8.0/Discounts.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Domain/obj/Debug/net8.0/Discounts.Domain.AssemblyInfoInputs.cache
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Domain/obj/Debug/net8.0/Discounts.Domain.AssemblyInfo.cs
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Domain/obj/Debug/net8.0/Discounts.Domain.csproj.CoreCompileInputs.cache
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Domain/obj/Debug/net8.0/Discounts.Domain.sourcelink.json
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Domain/obj/Debug/net8.0/Discounts.Domain.dll
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Domain/obj/Debug/net8.0/refint/Discounts.Domain.dll
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Domain/obj/Debug/net8.0/Discounts.Domain.pdb
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Domain/obj/Debug/net8.0/ref/Discounts.Domain.dll

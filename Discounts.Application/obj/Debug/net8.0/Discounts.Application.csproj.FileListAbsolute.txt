@@ -1,0 +1,16 @@
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/bin/Debug/net8.0/Discounts.Application.deps.json
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/bin/Debug/net8.0/Discounts.Application.dll
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/bin/Debug/net8.0/Discounts.Application.pdb
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/bin/Debug/net8.0/Discounts.Domain.dll
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/bin/Debug/net8.0/Discounts.Domain.pdb
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/obj/Debug/net8.0/Discounts.Application.csproj.AssemblyReference.cache
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/obj/Debug/net8.0/Discounts.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/obj/Debug/net8.0/Discounts.Application.AssemblyInfoInputs.cache
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/obj/Debug/net8.0/Discounts.Application.AssemblyInfo.cs
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/obj/Debug/net8.0/Discounts.Application.csproj.CoreCompileInputs.cache
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/obj/Debug/net8.0/Discounts.Application.sourcelink.json
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/obj/Debug/net8.0/Discount.585ED959.Up2Date
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/obj/Debug/net8.0/Discounts.Application.dll
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/obj/Debug/net8.0/refint/Discounts.Application.dll
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/obj/Debug/net8.0/Discounts.Application.pdb
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/obj/Debug/net8.0/ref/Discounts.Application.dll
