@@ -1,11 +1,13 @@
 // Copyright (C) TBC Bank. All Rights Reserved.
 
 using Discounts.Domain.Entities;
+using Discounts.Domain.Enums;
 using Discounts.Infrastructure.Context;
 using Discounts.Web.Models.Auth;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.EntityFrameworkCore;
 
 namespace Discounts.Web.Controllers
 {
@@ -82,10 +84,23 @@ namespace Discounts.Web.Controllers
                 return View(model);
             }
 
-            var user = await _userManager.FindByEmailAsync(model.Email);
+            var user = await _userManager.FindByEmailAsync(model.Email).ConfigureAwait(false);
 
             if (user != null)
             {
+                var isMerchant = await _userManager.IsInRoleAsync(user, "Merchant").ConfigureAwait(false);
+                if (isMerchant)
+                {
+                    var merchantProfile = await _context
+                        .Merchants
+                        .FirstOrDefaultAsync(m => m.Email == user.Email).ConfigureAwait(false);
+                    if (merchantProfile != null && merchantProfile.Status == MerchantStatus.Pending)
+                    {
+                        ModelState.AddModelError(string.Empty, "Dude, wait for pending approval");
+                        return View(model);
+                    }
+                }
+
                 var result = await _signInManager.PasswordSignInAsync(user.UserName, model.Password, model.RememberMe, lockoutOnFailure: false);
 
                 if (result.Succeeded)
