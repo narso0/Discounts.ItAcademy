@@ -10,6 +10,7 @@ builder.Services
     .AddEntityFrameworkStores<DiscountsDbContext>()
     .AddDefaultTokenProviders();
 builder.Services.AddScoped<IDbInitializer, DbInitializer>();
+builder.Services.AddScoped<ICategoryRepository, ICategoryRepository>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
