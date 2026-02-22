@@ -1,5 +1,6 @@
 using Discounts.Application.Interfaces;
 using Discounts.Infrastructure.Context;
+using Discounts.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,7 +11,8 @@ builder.Services
     .AddEntityFrameworkStores<DiscountsDbContext>()
     .AddDefaultTokenProviders();
 builder.Services.AddScoped<IDbInitializer, DbInitializer>();
-builder.Services.AddScoped<ICategoryRepository, ICategoryRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
