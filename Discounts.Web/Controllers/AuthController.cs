@@ -105,7 +105,16 @@ namespace Discounts.Web.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Home");
+                        var roles = await _userManager.GetRolesAsync(user).ConfigureAwait(false);
+                        if (roles.Contains("Admin"))
+                        {
+                            return RedirectToAction("Index", "Home");                        }
+
+                        if (roles.Contains("Merchant"))
+                        {
+                            return RedirectToAction("Index", "Merchant");
+                        }
+                        return RedirectToAction("Index", "Home");
                 }
             }
 

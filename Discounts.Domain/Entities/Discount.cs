@@ -20,4 +20,6 @@ public class Discount : BaseEntity
     public Category? Category { get; set;}
 
     public ICollection<Reservation> Reservations = new List<Reservation>();
+    //new
+    public string? RejectionReason { get; set; }
 }

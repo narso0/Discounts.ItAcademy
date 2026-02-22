@@ -49,5 +49,17 @@ namespace Discounts.Infrastructure.Repositories
             _context.Discounts.Remove(discount);
             await _context.SaveChangesAsync().ConfigureAwait(false);
         }
+
+        //added later
+        public async Task<IEnumerable<Discount>> GetPendingDiscountsAsync()
+        {
+            return await _context.Discounts
+                .Where(d => d.IsActive == false && d.RejectionReason == null)
+                .Include(d => d.Category)
+                .Include(d => d.Merchant)
+                .AsNoTracking()
+                .ToListAsync()
+                .ConfigureAwait(false);
+        }
     }
 }

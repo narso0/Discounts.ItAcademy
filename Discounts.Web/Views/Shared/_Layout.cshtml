@@ -28,6 +28,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+
                         @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
                         {
                             <li class="nav-item">
@@ -38,6 +39,19 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark fw-bold" asp-controller="Categories" asp-action="Index">
                                     <i class="bi bi-tags"></i> Categories
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-warning fw-bold" asp-controller="Admin" asp-action="PendingOffers">
+                                    <i class="bi bi-clock-history"></i> Pending Offers
+                                </a>
+                            </li>
+                        }
+                        @if (SignInManager.IsSignedIn(User) && User.IsInRole("Merchant"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-primary fw-bold" asp-controller="Merchant" asp-action="Index">
+                                    <i class="bi bi-shop"></i> My Dashboard
                                 </a>
                             </li>
                         }

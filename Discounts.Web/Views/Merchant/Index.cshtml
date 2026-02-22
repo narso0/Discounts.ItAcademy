@@ -1,0 +1,73 @@
+@model IEnumerable<Discounts.Web.Models.Merchant.DiscountViewModel>
+
+@{
+    ViewData["Title"] = "My Offers Dashboard";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>My Offers Dashboard</h2>
+        <a asp-controller="Merchant" asp-action="Create" class="btn btn-primary">
+            + Create New Offer
+        </a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            @if (!Model.Any())
+            {
+                <div class="alert alert-info">
+                    You have not created any offers yet. Click the button above to start.
+                </div>
+            }
+            else
+            {
+                <table class="table table-hover mt-3">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Original Price</th>
+                            <th>Discount Price</th>
+                            <th>Quantity</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Title</td>
+                                <td>@item.CategoryName</td>
+                                <td>@item.OriginalPrice.ToString("C")</td>
+                                <td><strong class="text-success">@item.DiscountedPrice.ToString("C")</strong></td>
+                                <td>@item.Quantity</td>
+                                <td>
+                                    @if (item.IsActive)
+                                    {
+                                        <span class="badge bg-success">Active / Approved</span>
+                                    }
+                                    else if (!string.IsNullOrEmpty(item.RejectionReason))
+                                    {
+                                        <span class="badge bg-danger">Rejected</span>
+                                        <div class="small text-danger mt-1 fw-bold">
+                                            <i class="bi bi-exclamation-triangle-fill"></i> @item.RejectionReason
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-warning text-dark">Pending Admin Approval</span>
+                                    }
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-secondary" disabled>Edit</button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+</div>

@@ -11,5 +11,8 @@ namespace Discounts.Application.Interfaces
         Task AddAsync(Discount discount);
         Task UpdateAsync(Discount discount);
         Task DeleteAsync(Discount discount);
+
+        //added later
+        Task<IEnumerable<Discount>> GetPendingDiscountsAsync();
     }
 }

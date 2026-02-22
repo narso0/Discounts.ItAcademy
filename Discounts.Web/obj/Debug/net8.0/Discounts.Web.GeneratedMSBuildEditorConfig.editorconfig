@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUGVuZGluZ01lcmNoYW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Web/Views/Admin/PendingOffers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUGVuZGluZ09mZmVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Web/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,6 +52,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Web/Views/Merchant/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVyY2hhbnQvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Web/Views/Merchant/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWVyY2hhbnQvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Web/Views/Shared/Error.cshtml]
