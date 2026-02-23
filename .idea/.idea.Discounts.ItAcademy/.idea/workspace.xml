@@ -12,32 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db53a839-532a-4bd8-8f8d-fdcbc8c59e91" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Discounts.ItAcademy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Discounts.ItAcademy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.API/bin/Debug/net8.0/Discounts.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.API/bin/Debug/net8.0/Discounts.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.API/bin/Debug/net8.0/Discounts.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.API/bin/Debug/net8.0/Discounts.API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.API/bin/Debug/net8.0/Discounts.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.API/bin/Debug/net8.0/Discounts.Application.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.API/bin/Debug/net8.0/Discounts.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.API/bin/Debug/net8.0/Discounts.Application.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/Discounts.API.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/Discounts.API.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/Discounts.API.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/Discounts.API.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/Discounts.API.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/Discounts.API.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/Discounts.API.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/Discounts.API.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/Discounts.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/Discounts.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/Discounts.API.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/Discounts.API.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/Discounts.API.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/Discounts.API.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/ref/Discounts.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/ref/Discounts.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/refint/Discounts.API.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.API/obj/Debug/net8.0/refint/Discounts.API.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.Application/Services/DiscountService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.Application/Services/DiscountService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.Application/bin/Debug/net8.0/Discounts.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.Application/bin/Debug/net8.0/Discounts.Application.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.Application/bin/Debug/net8.0/Discounts.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.Application/bin/Debug/net8.0/Discounts.Application.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.Application/obj/Debug/net8.0/Discounts.Application.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.Application/obj/Debug/net8.0/Discounts.Application.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.Application/obj/Debug/net8.0/Discounts.Application.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.Application/obj/Debug/net8.0/Discounts.Application.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.Application/obj/Debug/net8.0/Discounts.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.Application/obj/Debug/net8.0/Discounts.Application.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.Application/obj/Debug/net8.0/Discounts.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.Application/obj/Debug/net8.0/Discounts.Application.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.Application/obj/Debug/net8.0/Discounts.Application.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.Application/obj/Debug/net8.0/Discounts.Application.sourcelink.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.Application/obj/Debug/net8.0/ref/Discounts.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.Application/obj/Debug/net8.0/ref/Discounts.Application.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.Application/obj/Debug/net8.0/refint/Discounts.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.Application/obj/Debug/net8.0/refint/Discounts.Application.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.Persistance/bin/Debug/net8.0/Discounts.Application.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.Persistance/bin/Debug/net8.0/Discounts.Application.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Discounts.Persistance/bin/Debug/net8.0/Discounts.Application.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.Persistance/bin/Debug/net8.0/Discounts.Application.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Discounts.UnitTests/Services/DiscountServiceTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Discounts.UnitTests/Services/DiscountServiceTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +33,7 @@
     <setting file="file://$PROJECT_DIR$/Discounts.API/Controllers/MerchantController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Discounts.API/Infrastructure/Extensions/ServiceExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Discounts.API/Infrastructure/Middleware/ExceptionMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Discounts.UnitTests/Services/MerchantServiceTests.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
@@ -82,6 +58,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.EditorConfig",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -174,7 +151,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1771885743952</updated>
-      <workItem from="1771885745564" duration="4665000" />
+      <workItem from="1771885745564" duration="5104000" />
     </task>
     <servers />
   </component>
@@ -202,5 +179,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
