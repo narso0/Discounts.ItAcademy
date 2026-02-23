@@ -85,9 +85,7 @@
 /Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Worker/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Worker/bin/Debug/net8.0/Discounts.Application.dll
 /Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Worker/bin/Debug/net8.0/Discounts.Domain.dll
-/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Worker/bin/Debug/net8.0/Discounts.Infrastructure.dll
 /Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Worker/bin/Debug/net8.0/Discounts.Application.pdb
-/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Worker/bin/Debug/net8.0/Discounts.Infrastructure.pdb
 /Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Worker/bin/Debug/net8.0/Discounts.Domain.pdb
 /Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Worker/obj/Debug/net8.0/Discounts.Worker.csproj.AssemblyReference.cache
 /Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Worker/obj/Debug/net8.0/Discounts.Worker.GeneratedMSBuildEditorConfig.editorconfig
@@ -101,3 +99,5 @@
 /Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Worker/obj/Debug/net8.0/Discounts.Worker.pdb
 /Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Worker/obj/Debug/net8.0/Discounts.Worker.genruntimeconfig.cache
 /Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Worker/obj/Debug/net8.0/ref/Discounts.Worker.dll
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Worker/bin/Debug/net8.0/Discounts.Persistance.dll
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Worker/bin/Debug/net8.0/Discounts.Persistance.pdb

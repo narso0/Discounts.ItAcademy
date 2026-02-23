@@ -9,7 +9,7 @@
       "Discounts.Worker/1.0.0": {
         "dependencies": {
           "Discounts.Application": "1.0.0",
-          "Discounts.Infrastructure": "1.0.0",
+          "Discounts.Persistance": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0",
           "Microsoft.Extensions.Hosting": "8.0.1"
         },
@@ -969,7 +969,7 @@
           }
         }
       },
-      "Discounts.Infrastructure/1.0.0": {
+      "Discounts.Persistance/1.0.0": {
         "dependencies": {
           "Discounts.Application": "1.0.0",
           "Discounts.Domain": "1.0.0",
@@ -977,7 +977,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0"
         },
         "runtime": {
-          "Discounts.Infrastructure.dll": {
+          "Discounts.Persistance.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1582,7 +1582,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Discounts.Infrastructure/1.0.0": {
+    "Discounts.Persistance/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
