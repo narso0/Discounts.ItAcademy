@@ -13,5 +13,7 @@ namespace Discounts.Web.Models.Merchant
         public string CategoryName { get; set; } = string.Empty;
         //new
         public string? RejectionReason { get; set; }
+        //newer
+        public bool CanEdit { get; set; }
     }
 }

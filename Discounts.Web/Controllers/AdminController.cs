@@ -15,10 +15,12 @@ namespace Discounts.Web.Controllers
     {
         private readonly DiscountsDbContext _context;
         private readonly IDiscountRepository  _discountRepo;
-        public AdminController(DiscountsDbContext context, IDiscountRepository discountRepo)
+        private readonly IGlobalSettingRepository _settingsRepo;
+        public AdminController(DiscountsDbContext context, IDiscountRepository discountRepo, IGlobalSettingRepository settingsRepo)
         {
             _context = context;
             _discountRepo = discountRepo;
+            _settingsRepo = settingsRepo;
         }
 
         [HttpGet]
@@ -99,6 +101,33 @@ namespace Discounts.Web.Controllers
             await _discountRepo.UpdateAsync(discount).ConfigureAwait(false);
             TempData["SuccessMessage"] = $"Offer '{discount.Title}' was rejected.";
             return RedirectToAction(nameof(PendingOffers));
+        }
+        [HttpGet]
+        public async Task<IActionResult> Settings()
+        {
+            var settings = await _settingsRepo.GetSettingsAsync().ConfigureAwait(false);
+            var model = new SettingsViewModel
+            {
+                ReservationTimeoutMinutes = settings.ReservationTimeoutMinutes,
+                MerchantEditGracePeriodHours = settings.MerchantEditGracePeriodHours
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Settings(SettingsViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var settings = await _settingsRepo.GetSettingsAsync().ConfigureAwait(false);
+            settings.ReservationTimeoutMinutes = model.ReservationTimeoutMinutes;
+            settings.MerchantEditGracePeriodHours = model.MerchantEditGracePeriodHours;
+            await _settingsRepo.UpdateSettingsAsync(settings).ConfigureAwait(false);
+            TempData["SuccessMessage"] = "Global system settings have been updated securely.";
+            return RedirectToAction(nameof(Settings));
         }
     }
 }

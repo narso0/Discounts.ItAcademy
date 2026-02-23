@@ -1,6 +1,7 @@
 // Copyright (C) TBC Bank. All Rights Reserved.
 
 using Discounts.Application.Interfaces;
+using Discounts.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -35,6 +36,18 @@ namespace Discounts.Infrastructure.Context
 
                 var adminUser = new IdentityUser { UserName = "admin@narso.com", Email = "admin@narso.com", EmailConfirmed = true };                await _userManager.CreateAsync(adminUser, "Admin123!").ConfigureAwait(false);
                 await _userManager.AddToRoleAsync(adminUser, "Admin").ConfigureAwait(false);
+            }
+            if (!await _context.GlobalSettings.AnyAsync().ConfigureAwait(false))
+            {
+                var defaultSettings = new GlobalSetting
+                {
+                    ReservationTimeoutMinutes = 30,
+                    MerchantEditGracePeriodHours = 24,
+                    CreatedAt = DateTime.UtcNow
+                };
+
+                _context.GlobalSettings.Add(defaultSettings);
+                await _context.SaveChangesAsync().ConfigureAwait(false);
             }
 
         }

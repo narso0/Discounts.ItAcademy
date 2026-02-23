@@ -1,0 +1,61 @@
+@model Discounts.Web.Models.Admin.SettingsViewModel
+
+@{
+    ViewData["Title"] = "Global System Settings";
+}
+
+<div class="container mt-4 mb-5" style="max-width: 800px;">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2><i class="bi bi-gear-fill text-secondary"></i> Global System Settings</h2>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show shadow-sm">
+            <i class="bi bi-check-circle-fill"></i> @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    <div class="card shadow-sm border-0 bg-light">
+        <div class="card-body p-4">
+            <form asp-controller="Admin" asp-action="Settings" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <div class="mb-4">
+                    <h5 class="text-primary border-bottom pb-2">Merchant Constraints</h5>
+                    <p class="text-muted small">Control how long merchants have to edit their offers after creation.</p>
+                    <div class="form-group">
+                        <label asp-for="MerchantEditGracePeriodHours" class="form-label fw-bold"></label>
+                        <div class="input-group">
+                            <input asp-for="MerchantEditGracePeriodHours" class="form-control form-control-lg" type="number" min="1" max="720" />
+                        </div>
+                        <span asp-validation-for="MerchantEditGracePeriodHours" class="text-danger small"></span>
+                    </div>
+                </div>
+
+                <div class="mb-4 mt-5">
+                    <h5 class="text-primary border-bottom pb-2">Customer Constraints</h5>
+                    <p class="text-muted small">Control how long a customer holds a discount reservation before it expires.</p>
+
+                    <div class="form-group">
+                        <label asp-for="ReservationTimeoutMinutes" class="form-label fw-bold"></label>
+                        <div class="input-group">
+                            <input asp-for="ReservationTimeoutMinutes" class="form-control form-control-lg" type="number" min="1" max="1440" />
+                        </div>
+                        <span asp-validation-for="ReservationTimeoutMinutes" class="text-danger small"></span>
+                    </div>
+                </div>
+                <div class="d-grid mt-5">
+                    <button type="submit" class="btn btn-primary btn-lg shadow-sm">
+                        <i class="bi bi-save"></i> Save Global Settings
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

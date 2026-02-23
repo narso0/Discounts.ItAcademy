@@ -13,6 +13,7 @@ builder.Services
 builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
+builder.Services.AddScoped<IGlobalSettingRepository, GlobalSettingRepository>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

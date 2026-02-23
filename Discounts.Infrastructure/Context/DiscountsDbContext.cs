@@ -14,6 +14,7 @@ public class DiscountsDbContext : IdentityDbContext<IdentityUser>
     public DbSet<Discount> Discounts { get; set; }
     public DbSet<Merchant> Merchants { get; set; }
     public DbSet<Reservation> Reservations { get; set; }
+    public DbSet<GlobalSetting> GlobalSettings { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

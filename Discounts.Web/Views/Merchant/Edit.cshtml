@@ -1,0 +1,105 @@
+@model Discounts.Web.Models.Merchant.DiscountEditViewModel
+
+@{
+    ViewData["Title"] = "Edit Offer";
+}
+
+<div class="container mt-4 mb-5" style="max-width: 800px;">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2><i class="bi bi-pencil-square text-primary"></i> Edit Discount Offer</h2>
+        <a asp-controller="Merchant" asp-action="Index" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left"></i> Back to Dashboard
+        </a>
+    </div>
+
+    <div class="card shadow-sm border-0 bg-light">
+        <div class="card-body p-4">
+            <div class="alert alert-warning small mb-4">
+                <i class="bi bi-exclamation-triangle-fill"></i> <strong>Note:</strong> Saving changes to an active offer will return it to "Pending Admin Approval" status.
+            </div>
+
+            <form asp-controller="Merchant" asp-action="Edit" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                <input type="hidden" asp-for="Id" />
+
+                <div class="row g-3 mb-3">
+                    <div class="col-md-8">
+                        <label asp-for="Title" class="form-label fw-bold"></label>
+                        <input asp-for="Title" class="form-control" placeholder="e.g., 50% off at Plaza" />
+                        <span asp-validation-for="Title" class="text-danger small"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label asp-for="CategoryId" class="form-label fw-bold"></label>
+                        <select asp-for="CategoryId" asp-items="Model.Categories" class="form-select">
+                            <option value="">-- Select a Category --</option>
+                        </select>
+                        <span asp-validation-for="CategoryId" class="text-danger small"></span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label fw-bold"></label>
+                    <textarea asp-for="Description" class="form-control" rows="4" placeholder="Describe your offer in detail..."></textarea>
+                    <span asp-validation-for="Description" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="ImageUrl" class="form-label fw-bold"></label>
+                    <input asp-for="ImageUrl" class="form-control" type="url" placeholder="https://example.com/image.jpg" />
+                    <span asp-validation-for="ImageUrl" class="text-danger small"></span>
+                    <div class="form-text">Provide a valid URL for the offer image.</div>
+                </div>
+
+                <h5 class="text-primary border-bottom pb-2 mt-4 mb-3">Pricing & Inventory</h5>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                        <label asp-for="OriginalPrice" class="form-label fw-bold"></label>
+                        <div class="input-group">
+                            <span class="input-group-text">₾</span>
+                            <input asp-for="OriginalPrice" class="form-control" type="number" step="0.01" />
+                        </div>
+                        <span asp-validation-for="OriginalPrice" class="text-danger small"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label asp-for="DiscountedPrice" class="form-label fw-bold"></label>
+                        <div class="input-group">
+                            <span class="input-group-text">₾</span>
+                            <input asp-for="DiscountedPrice" class="form-control" type="number" step="0.01" />
+                        </div>
+                        <span asp-validation-for="DiscountedPrice" class="text-danger small"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label asp-for="Quantity" class="form-label fw-bold"></label>
+                        <input asp-for="Quantity" class="form-control" type="number" />
+                        <span asp-validation-for="Quantity" class="text-danger small"></span>
+                    </div>
+                </div>
+
+                <h5 class="text-primary border-bottom pb-2 mt-4 mb-3">Validity Period</h5>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label asp-for="StartDate" class="form-label fw-bold"></label>
+                        <input asp-for="StartDate" class="form-control" type="datetime-local" />
+                        <span asp-validation-for="StartDate" class="text-danger small"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="EndDate" class="form-label fw-bold"></label>
+                        <input asp-for="EndDate" class="form-control" type="datetime-local" />
+                        <span asp-validation-for="EndDate" class="text-danger small"></span>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end gap-2 mt-4">
+                    <a asp-controller="Merchant" asp-action="Index" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-save"></i> Save Changes
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
