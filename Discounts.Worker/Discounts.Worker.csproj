@@ -14,6 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Discounts.Application\Discounts.Application.csproj" />
-    <ProjectReference Include="..\Discounts.Infrastructure\Discounts.Infrastructure.csproj" />
+    <ProjectReference Include="..\Discounts.Persistance\Discounts.Persistance.csproj" />
   </ItemGroup>
 </Project>

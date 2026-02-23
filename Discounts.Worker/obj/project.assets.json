@@ -1578,7 +1578,7 @@
           "bin/placeholder/Discounts.Domain.dll": {}
         }
       },
-      "Discounts.Infrastructure/1.0.0": {
+      "Discounts.Persistance/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -1588,10 +1588,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0"
         },
         "compile": {
-          "bin/placeholder/Discounts.Infrastructure.dll": {}
+          "bin/placeholder/Discounts.Persistance.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Discounts.Infrastructure.dll": {}
+          "bin/placeholder/Discounts.Persistance.dll": {}
         }
       }
     }
@@ -4082,16 +4082,16 @@
       "path": "../Discounts.Domain/Discounts.Domain.csproj",
       "msbuildProject": "../Discounts.Domain/Discounts.Domain.csproj"
     },
-    "Discounts.Infrastructure/1.0.0": {
+    "Discounts.Persistance/1.0.0": {
       "type": "project",
-      "path": "../Discounts.Infrastructure/Discounts.Infrastructure.csproj",
-      "msbuildProject": "../Discounts.Infrastructure/Discounts.Infrastructure.csproj"
+      "path": "../Discounts.Persistance/Discounts.Persistance.csproj",
+      "msbuildProject": "../Discounts.Persistance/Discounts.Persistance.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Discounts.Application >= 1.0.0",
-      "Discounts.Infrastructure >= 1.0.0",
+      "Discounts.Persistance >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.0",
       "Microsoft.Extensions.Hosting >= 8.0.1"
     ]
@@ -4124,8 +4124,8 @@
             "/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/Discounts.Application.csproj": {
               "projectPath": "/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Application/Discounts.Application.csproj"
             },
-            "/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Infrastructure/Discounts.Infrastructure.csproj": {
-              "projectPath": "/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Infrastructure/Discounts.Infrastructure.csproj"
+            "/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Persistance/Discounts.Persistance.csproj": {
+              "projectPath": "/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Persistance/Discounts.Persistance.csproj"
             }
           }
         }

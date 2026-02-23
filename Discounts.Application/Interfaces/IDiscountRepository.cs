@@ -16,5 +16,10 @@ namespace Discounts.Application.Interfaces
         Task<IEnumerable<Discount>> GetPendingDiscountsAsync();
         //new
         Task<IEnumerable<Discount>> GetActiveDiscountsAsync();
+        Task AddReservationAsync(Reservation reservation);
+        Task<IEnumerable<Reservation>> GetCustomerReservationsAsync(string email);
+        Task<Reservation?> GetReservationByIdAndEmailAsync(int id, string email);
+        Task UpdateReservationAsync(Reservation reservation);
+        Task<IEnumerable<Reservation>> GetPaidSalesByMerchantAsync(int merchantId);
     }
 }
