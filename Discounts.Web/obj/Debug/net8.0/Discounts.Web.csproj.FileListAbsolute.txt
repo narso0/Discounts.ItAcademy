@@ -148,3 +148,4 @@
 /Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Web/obj/Debug/net8.0/Discounts.Web.pdb
 /Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Web/obj/Debug/net8.0/Discounts.Web.genruntimeconfig.cache
 /Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Web/obj/Debug/net8.0/ref/Discounts.Web.dll
+/Users/narso/Desktop/Projects/Discounts.ItAcademy/Discounts.Web/bin/Debug/net8.0/HealthChecks.SqlServer.dll

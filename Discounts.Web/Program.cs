@@ -16,6 +16,9 @@ builder.Services.AddScoped<IDiscountRepository, DiscountRepository>();
 builder.Services.AddScoped<IGlobalSettingRepository, GlobalSettingRepository>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+//N10 health check
+builder.Services.AddHealthChecks()
+    .AddSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 
 var app = builder.Build();
 using (var scope = app.Services.CreateScope())
@@ -38,6 +41,8 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.MapHealthChecks("/health");
 
 app.MapControllerRoute(
     name: "default",
