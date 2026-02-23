@@ -14,5 +14,7 @@ namespace Discounts.Application.Interfaces
 
         //added later
         Task<IEnumerable<Discount>> GetPendingDiscountsAsync();
+        //new
+        Task<IEnumerable<Discount>> GetActiveDiscountsAsync();
     }
 }

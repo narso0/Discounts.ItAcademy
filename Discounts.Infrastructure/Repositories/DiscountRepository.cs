@@ -61,5 +61,16 @@ namespace Discounts.Infrastructure.Repositories
                 .ToListAsync()
                 .ConfigureAwait(false);
         }
+        //new
+        public async Task<IEnumerable<Discount>> GetActiveDiscountsAsync()
+        {
+            return await _context.Discounts
+                .Where(d => d.IsActive == true && d.Quantity > 0 && d.EndDate > DateTime.UtcNow)
+                .Include(d => d.Category)
+                .Include(d => d.Merchant)
+                .AsNoTracking()
+                .ToListAsync()
+                .ConfigureAwait(false);
+        }
     }
 }
