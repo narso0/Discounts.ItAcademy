@@ -184,5 +184,26 @@ namespace Discounts.Web.Controllers
             TempData["SuccessMessage"] = "Offer updated successfully and sent to Admin for review.";
             return RedirectToAction(nameof(Index));
         }
+        [HttpGet]
+        public async Task<IActionResult> SalesHistory()
+        {
+            var merchantId = await GetCurrentMerchantId().ConfigureAwait(false);
+            var sales = await _context.Reservations
+                .Include(r => r.Discount)
+                .Where(r => r.Discount!.MerchantId == merchantId && r.IsPaid == true)
+                .OrderByDescending(r => r.ReservationTime)
+                .Select(r => new SalesHistoryViewModel
+                {
+                    DiscountTitle = r.Discount!.Title,
+                    CustomerEmail = r.CustomerEmail,
+                    TransactionDate = r.ReservationTime,
+                    CouponCode = r.CouponCode,
+                    PricePaid = r.Discount.DiscountedPrice
+                })
+                .ToListAsync()
+                .ConfigureAwait(false);
+
+            return View(sales);
+        }
     }
 }

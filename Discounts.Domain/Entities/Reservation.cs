@@ -11,4 +11,5 @@ public class Reservation : BaseEntity
     public bool IsUsed{ get; set;} = false;
     public int DiscountId { get; set;}
     public Discount? Discount { get; set;}
+    public bool IsPaid { get; set; } = false;
 }

@@ -1,0 +1,93 @@
+@model IEnumerable<Discounts.Domain.Entities.Reservation>
+
+@{
+    ViewData["Title"] = "My Coupons";
+}
+
+<div class="container mt-4 mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2><i class="bi bi-ticket-perforated text-primary"></i> My Reservations & Coupons</h2>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show shadow-sm">
+            <i class="bi bi-check-circle-fill"></i> @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show shadow-sm">
+            <i class="bi bi-exclamation-triangle-fill"></i> @TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    }
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info shadow-sm">
+            You do not have any reservations or purchased coupons yet.
+        </div>
+    }
+    else
+    {
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            @foreach (var item in Model)
+            {
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0 @(item.IsPaid ? "border-success border-2" : "")">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h5 class="card-title fw-bold mb-0">@item.Discount?.Title</h5>
+
+                                @if (item.IsPaid)
+                                {
+                                    <span class="badge bg-success">Purchased</span>
+                                }
+                                else if (item.ExpiryTime < DateTime.UtcNow)
+                                {
+                                    <span class="badge bg-danger">Expired</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-warning text-dark">Reserved (Pending Payment)</span>
+                                }
+                            </div>
+
+                            <p class="text-muted small mb-2"><i class="bi bi-shop"></i> @item.Discount?.Merchant?.Name</p>
+
+                            <div class="bg-light p-3 rounded mb-3 text-center border">
+                                <span class="d-block text-muted small fw-bold text-uppercase mb-1">Your Coupon Code</span>
+                                @if (item.IsPaid)
+                                {
+                                    <h3 class="text-success fw-bold font-monospace tracking-wide mb-0">@item.CouponCode</h3>
+                                    <span class="small text-muted">Show this code at the store.</span>
+                                }
+                                else
+                                {
+                                    <h3 class="text-muted fw-bold font-monospace tracking-wide mb-0">********</h3>
+                                    <span class="small text-danger">Code hidden until purchased.</span>
+                                }
+                            </div>
+
+                            @if (!item.IsPaid && item.ExpiryTime > DateTime.UtcNow)
+                            {
+                                <div class="alert alert-warning py-2 small mb-3">
+                                    <i class="bi bi-clock-history"></i> Expires at: <strong>@item.ExpiryTime.ToLocalTime().ToString("g")</strong>
+                                </div>
+
+                                <form asp-controller="Home" asp-action="Purchase" method="post">
+                                    <input type="hidden" name="reservationId" value="@item.Id" />
+                                    <button type="submit" class="btn btn-primary w-100 fw-bold">
+                                        <i class="bi bi-credit-card"></i> Pay to Unlock
+                                    </button>
+                                </form>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

@@ -60,6 +60,17 @@
                                 </a>
                             </li>
                         }
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-bold" asp-controller="Merchant" asp-action="SalesHistory">
+                                <i class="bi bi-receipt"></i> Sales History
+                            </a>
+                        </li>
+                        @if (User.Identity.IsAuthenticated && !User.IsInRole("Admin") && !User.IsInRole("Merchant"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Home" asp-action="MyCoupons">My Coupons</a>
+                            </li>
+                        }
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         @if (SignInManager.IsSignedIn(User))
