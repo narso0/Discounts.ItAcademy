@@ -43,7 +43,8 @@ public class AuthController : Controller
                     Number = model.MerchantPhone,
                     Email = model.Email
                 }).ConfigureAwait(false);
-                return RedirectToAction("Index", "Home", new { message = "PendingApproval" });
+                TempData["SuccessMessage"] = "Registration successful! Your Merchant account is currently pending Admin approval.";
+                return RedirectToAction("Index", "Home");
             }
             await _signInManager.SignInAsync(user, isPersistent:false).ConfigureAwait(false);
             return RedirectToAction("Index", "Home");

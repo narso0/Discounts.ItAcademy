@@ -99,10 +99,26 @@ public class AdminController : Controller
 
         var settings = await _adminService.GetGlobalSettingsAsync().ConfigureAwait(false);
         settings.ReservationTimeoutMinutes = model.ReservationTimeoutMinutes;
+        settings.MerchantEditGracePeriodHours = model.MerchantEditGracePeriodHours;
 
         await _adminService.UpdateGlobalSettingsAsync(settings).ConfigureAwait(false);
 
-        TempData["SuccessMessage"] = "Global settings updated.";
+        TempData["SuccessMessage"] = "Global settings updated successfully.";
         return RedirectToAction(nameof(Settings));
+    }
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> ApproveMerchant(int id)
+    {
+        try
+        {
+            await _adminService.ApproveMerchantAsync(id).ConfigureAwait(false);
+            TempData["SuccessMessage"] = "Merchant approved successfully. They can now create offers.";
+        }
+        catch (Exception ex)
+        {
+            TempData["ErrorMessage"] = "Error approving merchant: " + ex.Message;
+        }
+        return RedirectToAction(nameof(PendingMerchants));
     }
 }

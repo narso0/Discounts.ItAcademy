@@ -56,5 +56,12 @@ namespace Discounts.Application.Services
         {
             return await _merchantRepo.GetPendingMerchantsAsync();
         }
+        public async Task ApproveMerchantAsync(int merchantId)
+        {
+            var merchant = await _merchantRepo.GetByIdAsync(merchantId);
+            if (merchant == null) throw new InvalidOperationException("Merchant not found.");
+            merchant.Status = Discounts.Domain.Enums.MerchantStatus.Active;
+            await _merchantRepo.UpdateAsync(merchant);
+        }
     }
 }

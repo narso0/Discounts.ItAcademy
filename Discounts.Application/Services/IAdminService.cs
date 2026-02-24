@@ -12,5 +12,6 @@ namespace Discounts.Application.Services
         Task<GlobalSetting> GetGlobalSettingsAsync();
         Task UpdateGlobalSettingsAsync(GlobalSetting settings);
         Task<IEnumerable<Merchant>> GetPendingMerchantsAsync();
+        Task ApproveMerchantAsync(int merchantId);
     }
 }

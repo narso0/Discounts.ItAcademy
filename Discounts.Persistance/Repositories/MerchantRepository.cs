@@ -32,5 +32,15 @@ namespace Discounts.Infrastructure.Repositories
             _context.Merchants.Add(merchant);
             await _context.SaveChangesAsync().ConfigureAwait(false);
         }
+        public async Task<Merchant?> GetByIdAsync(int id)
+        {
+            return await _context.Merchants.FindAsync(id);
+        }
+
+        public async Task UpdateAsync(Merchant merchant)
+        {
+            _context.Merchants.Update(merchant);
+            await _context.SaveChangesAsync();
+        }
     }
 }

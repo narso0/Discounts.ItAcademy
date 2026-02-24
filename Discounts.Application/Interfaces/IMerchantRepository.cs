@@ -9,5 +9,7 @@ namespace Discounts.Application.Interfaces
         Task<IEnumerable<Merchant>> GetPendingMerchantsAsync();
         Task<Merchant?> GetByEmailAsync(string email);
         Task AddAsync(Merchant merchant);
+        Task<Merchant?> GetByIdAsync(int id);
+        Task UpdateAsync(Merchant merchant);
     }
 }
