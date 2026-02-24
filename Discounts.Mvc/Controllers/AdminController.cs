@@ -85,7 +85,8 @@ public class AdminController : Controller
         var settings = await _adminService.GetGlobalSettingsAsync().ConfigureAwait(false);
         var viewModel = new SettingsViewModel
         {
-            ReservationTimeoutMinutes = settings.ReservationTimeoutMinutes
+            ReservationTimeoutMinutes = settings?.ReservationTimeoutMinutes ?? 30,
+            MerchantEditGracePeriodHours = settings?.MerchantEditGracePeriodHours ?? 24
         };
         return View(viewModel);
     }

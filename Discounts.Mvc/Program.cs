@@ -43,6 +43,15 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
+var supportedCultures = new[] { new System.Globalization.CultureInfo("ka-GE") };
+app.UseRequestLocalization(new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("ka-GE"),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures
+});
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
